@@ -1,0 +1,132 @@
+* {
+	font-family: 'Roboto Mono', monospace;
+	color: #bf0000;
+}
+body {
+	background-color: black;
+	margin: 0;
+}
+
+header {
+	width: 97%;
+	display: flex;
+	justify-content: space-between;
+}
+
+header>div {
+	display: flex;
+	flex-direction: column;
+	width: 180px;
+}
+
+header p {
+	font-size: 20px;
+}
+
+header>div button {
+	font-weight: 400;
+	font-size: 40px;
+	height: 50px;
+	margin-top: 20px;
+	border: none;
+	border-bottom-style: solid;
+	border-right-style: solid;
+	background-color: transparent;
+	cursor: pointer;
+	color: #bc0000;
+	transition-duration: 5s;
+}
+
+header>div button:hover {
+	text-align: left;
+}
+
+header>div button:active, .button__on, .button__on:hover {
+	width: 120%;
+	text-align: right;
+}
+
+
+#contact {
+	width: 400px;
+	text-align: right;
+	margin-top: 12px;
+}
+
+.button__arrow {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.button__arrow:hover {
+	width: 34px;
+	height: 34px;
+}
+
+.button__arrow:active {
+	width: 28px;
+	height: 28px;
+}
+
+#socialLinks {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	height: 80px;
+}
+#socialLinks img {
+	margin-left: auto;
+	margin-right: 10px;
+	width: 60px;
+}
+
+#socialLinks img:hover {
+	width: 70px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+
+#socialLinks img:active {
+	width: 60px;
+
+}
+main {
+	display: flex;
+	flex-direction: column;
+	margin-top: -350px;
+	align-items: center;
+}
+#placeholder {
+	height: 80vh;
+}
+
+main h1{
+	text-align: center;
+	margin-bottom: 1%;
+	font-weight: 300;
+}
+
+main img {
+	height: 600px;
+	margin-left: 16px;
+	margin-right: 16px;
+	object-fit: contain;
+}
+
+main>p {
+	width: 50%;
+	text-align: center;
+	font-size: 22px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 300;
+}
+
+footer p {
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	font-weight: 600;
+	color: #790000;
+}
