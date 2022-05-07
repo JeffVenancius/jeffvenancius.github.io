@@ -34,7 +34,6 @@ header>div button {
 	background-color: transparent;
 	cursor: pointer;
 	color: #bc0000;
-	transition-duration: 5s;
 }
 
 header>div button:hover {
@@ -112,8 +111,18 @@ main img {
 	margin-left: 16px;
 	margin-right: 16px;
 	object-fit: contain;
+	margin-bottom: 0;
 }
 
+main img:hover {
+	height: 580px;
+	margin-bottom: 20px;
+}
+
+main img:active {
+	height: 610px;
+	margin-bottom: -10px;
+}
 main>p {
 	width: 50%;
 	text-align: center;
