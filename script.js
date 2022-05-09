@@ -1,11 +1,12 @@
 let index = 0
 let keys
 let field
-
+let intro = false
 function onButton(buttonName) { // importing DB from ./portfolio.js
 	index = 0
 	field = buttonName
 	toggleButton()
+	intro = true
 	setRender()
 }
 
@@ -36,12 +37,13 @@ function setRender(){
 
 	let img = `./img/${[keys[index]]}.jpg`
 	let inner = `
-	<h1>${title}</h1>
+	<h1 id="temp__title">${title}</h1>
 	<div>
 	${arrowLess ? '': '<img src="img/arrow.svg" class="button__arrow" style="transform: scaleX(-1)" onclick="addId(-1)">'}
-	<a href="${link}"><img src="${img}"/></a>
+	<a href="${link}" target="_blank" rel="noopener noreferrer"><img id="cover__img" ${intro && 'class="temp__cover__img"' } src="${img}"/></a>
 	${arrowGreater ? '' : '<img src="img/arrow.svg" class="button__arrow" onclick="addId(1)">'}
 	</div>
-	<p>${description}</p>`
+	<p id="temp__description">${description}</p>`
 	document.querySelector('main').innerHTML = inner
+	// intro = false
 }

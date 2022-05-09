@@ -34,6 +34,8 @@ header>div button {
 	background-color: transparent;
 	cursor: pointer;
 	color: #bc0000;
+	width: 100%;
+	transition: width .1s;
 }
 
 header>div button:hover {
@@ -56,15 +58,19 @@ header>div button:active, .button__on, .button__on:hover {
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
+	transition: width .1s, height .1s;  
 }
 .button__arrow:hover {
-	width: 34px;
-	height: 34px;
+	width: 44px;
+	height: 44px;
+	margin-left: 12px;
+	margin-right: 12px;
+	filter: brightness(1.3);
 }
 
 .button__arrow:active {
-	width: 28px;
-	height: 28px;
+	width: 32px;
+	height: 32px;
 }
 
 #socialLinks {
@@ -77,6 +83,7 @@ header>div button:active, .button__on, .button__on:hover {
 	margin-left: auto;
 	margin-right: 10px;
 	width: 60px;
+	transition: width .1s, margin .1s;
 }
 
 #socialLinks img:hover {
@@ -106,22 +113,47 @@ main h1{
 	font-weight: 300;
 }
 
-main img {
+#temp__title {
+	animation-name: title__anim;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes title__anim {
+	from {font-size: 0};
+	to {font-size: 32px}
+}
+
+#cover__img {
 	height: 600px;
 	margin-left: 16px;
 	margin-right: 16px;
 	object-fit: contain;
 	margin-bottom: 0;
+	transition: height .1s, margin .1s;
 }
 
-main img:hover {
+.temp__cover__img {
+	animation-name: cover__img__anim;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+#cover__img:hover {
 	height: 580px;
 	margin-bottom: 20px;
 }
 
-main img:active {
+#cover__img:active {
 	height: 610px;
 	margin-bottom: -10px;
+}
+
+@keyframes cover__img__anim {
+	from {opacity: 0.5;}
+	to  {opacity: 1;}
+	/* from {height: 580px;} */
+	/* to {height: 600px;} */
 }
 main>p {
 	width: 50%;
@@ -130,6 +162,18 @@ main>p {
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: 300;
+}
+
+#temp__description {
+	animation-name: description__anim;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes description__anim {
+	from {font-size: 0;}
+	to {font-size: 22px;}
+
 }
 
 footer p {
