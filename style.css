@@ -13,7 +13,7 @@ header {
 	justify-content: space-between;
 }
 
-header>div {
+#choices {
 	display: flex;
 	flex-direction: column;
 	width: 180px;
@@ -182,4 +182,34 @@ footer p {
 	margin: 0;
 	font-weight: 600;
 	color: #790000;
+}
+
+#header__mobile {
+	display: flex;
+	flex-direction: column;
+}
+.choices__mobile {
+	/* margin-left: 75%; */
+	position: fixed;
+	top: 80px;
+	right: 45px;
+}
+
+#bio__mobile {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+#contact__mobile {
+	width: 100vw;
+	display: flex;
+}
+
+#contact__mobile div {
+	margin: auto;
+}
+
+#main__mobile {
+	margin-top: 0;
 }
