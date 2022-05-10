@@ -108,6 +108,7 @@ function addId(counter) {
 }
 
 function setRender(){
+	if (!field) {return}
 	keys = Object.keys(DB[field])
 	let title = keys[index]
 	let description = getInfo('desc')
@@ -118,13 +119,13 @@ function setRender(){
 
 	let img = `./img/${[keys[index]]}.jpg`
 	let inner = `
-	<h1 id="temp__title">${title}</h1>
+	<h1 id="title">${title}</h1>
 	<div>
-	${arrowLess ? '': '<img src="img/arrow.svg" class="button__arrow" style="transform: scaleX(-1)" onclick="addId(-1)">'}
-	<a href="${link}" target="_blank" rel="noopener noreferrer"><img id="cover__img" ${intro && 'class="temp__cover__img"' } src="${img}"/></a>
-	${arrowGreater ? '' : '<img src="img/arrow.svg" class="button__arrow" onclick="addId(1)">'}
+	${arrowLess ? '': '<img src="img/arrow.svg" class="button__arrow left" style="transform: scaleX(-1)" onclick="addId(-1)">'}
+	<a href="${link}" target="_blank" rel="noopener noreferrer"><img id="cover__img" ${intro && 'class="cover__img"' } src="${img}"/></a>
+	${arrowGreater ? '' : '<img src="img/arrow.svg" class="button__arrow right" onclick="addId(1)">'}
 	</div>
-	<p id="temp__description"}>${description}</p>`
+	<p id="description"}>${description}</p>`
 	document.querySelector('main').innerHTML = inner
 	intro = false
 }

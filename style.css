@@ -1,6 +1,7 @@
 * {
 	font-family: 'Roboto Mono', monospace;
 	color: #bf0000;
+	outline: none;
 }
 body {
 	background-color: black;
@@ -55,18 +56,27 @@ header>div button:active, .button__on, .button__on:hover {
 }
 
 .button__arrow {
+	position:absolute;
 	width: 32px;
 	height: 32px;
 	cursor: pointer;
 	transition: width .1s, height .1s;  
+	z-index: 100;
 }
+
+.left, .right {
+	bottom: 180px;
+}
+
+
 .button__arrow:hover {
 	width: 44px;
 	height: 44px;
-	margin-left: 12px;
-	margin-right: 12px;
+	/* margin-left: 12px; */
+	/* margin-right: 12px; */
 	filter: brightness(1.3);
 }
+
 
 .button__arrow:active {
 	width: 32px;
@@ -113,7 +123,7 @@ main h1{
 	font-weight: 300;
 }
 
-#temp__title {
+#title {
 	animation-name: title__anim;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
@@ -126,6 +136,7 @@ main h1{
 
 #cover__img {
 	height: 600px;
+	width: 600px;
 	margin-left: 16px;
 	margin-right: 16px;
 	object-fit: contain;
@@ -133,7 +144,7 @@ main h1{
 	transition: height .1s, margin .1s;
 }
 
-.temp__cover__img {
+.cover__img {
 	animation-name: cover__img__anim;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
@@ -164,10 +175,12 @@ main>p {
 	font-weight: 300;
 }
 
-#temp__description {
+#description {
 	animation-name: description__anim;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
+	width: 95%;
+	margin-top: 0;
 }
 
 @keyframes description__anim {
@@ -189,16 +202,22 @@ footer p {
 	flex-direction: column;
 }
 .choices__mobile {
-	/* margin-left: 75%; */
-	position: fixed;
-	top: 80px;
-	right: 45px;
+	position: absolute;
+	top: 265px;
+	right: 44px;
 }
 
 #bio__mobile {
 	display: flex;
+	margin-left: 8px;
 	width: 100%;
 	justify-content: space-evenly;
+}
+
+#bio__mobile p {
+	font-size: 103%; 
+	text-align: center;
+	font-weight: 500;
 }
 
 #contact__mobile {
@@ -212,4 +231,37 @@ footer p {
 
 #main__mobile {
 	margin-top: 0;
+}
+
+@media only screen and (max-width: 600px){
+	#cover__img {
+		width: 400px;
+	}
+	.button__arrow{
+		bottom: -240px;
+	}
+	.left {
+		left: 8px;
+	}
+	.right {
+		right: 8px;
+	}
+	#description{
+		margin-top: -16px;
+		font-size: 18px;
+		font-weight: 400;
+		color:#790000 ;
+	}
+	footer p {
+		margin-bottom: 18px;
+	}
+	@keyframes description__anim {
+	from {font-size: 0;}
+	to {font-size: 18px;}
+	}
+	header>div button, main h1 {
+		color:#790000;
+	}
+	main h1{
+		font-weight: 400;
 }
