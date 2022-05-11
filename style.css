@@ -235,11 +235,10 @@ footer p {
 
 @media only screen and (max-width: 600px){
 	#header__mobile p {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	#cover__img {
 		width: 400px;
-		/* margin-left: 8px; */
 	}
 	.button__arrow{
 		bottom: -240px;
